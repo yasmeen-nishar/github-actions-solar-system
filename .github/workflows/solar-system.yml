@@ -77,8 +77,8 @@ jobs:
           tokenPrefix: '${{'
           tokenSuffix: '}}'
         env:
-          NAMESPACE: ${{ env.NAMESPACE }}
-          REPLICAS: ${{ env.REPLICAS }}
+          NAMESPACE: ${{ vars.NAMESPACE }}
+          REPLICAS: ${{ vars.REPLICAS }}
           IMAGE: ghcr.io/${{ github.actor }}/solar-system:${{ github.sha }}
           INGRESS_IP: ${{ env.INGRESS_IP }}
   
