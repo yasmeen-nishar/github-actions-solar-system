@@ -53,11 +53,11 @@ jobs:
           path: coverage
           retention-days: 5  
     dev-deploy:
-      runs-on: ubuntu-latest
-      environment:
-      name: development
-      needs: docker
-      steps:
+        runs-on: ubuntu-latest
+        environment:
+        name: development
+        needs: docker
+        steps:
         - uses: actions/checkout@v4
         - uses: azure/setup-kubectl@v3
           with:
