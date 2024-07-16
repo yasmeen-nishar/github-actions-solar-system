@@ -74,8 +74,8 @@ jobs:
       - name: Replace placeholders in Kubernetes manifests
         uses: cschleiden/replace-tokens@v1
         with:
-          tokenPrefix: '${{'
-          tokenSuffix: '}}'
+          tokenPrefix: ' { '
+          tokenSuffix: ' } '
         env:
           NAMESPACE: ${{ vars.NAMESPACE }}
           REPLICAS: ${{ vars.REPLICAS }}
